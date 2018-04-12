@@ -9,16 +9,19 @@ import { CadastroClienteComponent } from './cadastrocliente/cadastrocliente.comp
 import { Cliente } from './domain/cliente';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ClienteService } from './services/cliente.service';
+import { ServicosService } from './services/servicos.service';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './services/login.service';
+import { ServicosComponent } from './servicos/servicos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    CadastroClienteComponent
+    CadastroClienteComponent,
+    ServicosComponent
   ],
   imports: [
     BrowserModule,
@@ -26,8 +29,9 @@ import { LoginService } from './services/login.service';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule
+
   ],
-  providers: [ClienteService, LoginService],
+  providers: [ClienteService, LoginService, ServicosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
